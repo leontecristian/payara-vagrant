@@ -81,11 +81,11 @@ Vagrant.configure("2") do |config|
 	echo "Provisioning Payara5 $PAYARA_ED to $PAYARA_HOME"
 	echo "Downloading Payara"
 	
-	#wget --progress=bar:force $PAYARA_ED -O temp.zip
-	#mkdir -p $PAYARA_HOME
-	#echo "Unzip ..."
-	#unzip -qq temp.zip -d $PAYARA_HOME
-	#rm temp.zip
+	wget --progress=bar:force $PAYARA_ED -O temp.zip
+	mkdir -p $PAYARA_HOME
+	echo "Unzip ..."
+	unzip -qq temp.zip -d $PAYARA_HOME
+	rm temp.zip
 	
 	echo "Enabling secure admin mode for domains (u/p = admin/payara0payara)"
 	PWDFILE=/tmp/pwdfile
